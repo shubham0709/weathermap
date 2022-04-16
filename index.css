@@ -1,0 +1,112 @@
+body {
+    margin: 0;
+}
+
+#navbar {
+    background-color: #29394b;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+#navbar>h1{
+    padding:0;
+    margin:0;
+    margin-left: 40px;
+    color:white;
+    opacity: 0.7;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-right:50%;
+}
+#navbar * {
+    margin-right: 40px;
+}
+
+#city {
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: #527297;
+    color: white;
+}
+
+#search {
+    padding: 0 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: #527297;
+    color: white;
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+::placeholder {
+    color: rgb(255, 255, 255);
+    opacity: 0.5;
+    font-family: monospace;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 2fr 4fr;
+    width: 100%;
+}
+
+
+
+.city_info {
+    background-color: rgb(255, 255, 255);
+}
+
+.gmap_canvas {
+    overflow: hidden;
+    background: none !important;
+}
+
+.mapouter {
+    position: relative;
+    text-align: right;
+}
+
+.all_data {
+    background-color: rgb(238, 247, 255);
+    margin: auto;
+    height: 500px;
+    width: 90%;
+    border: none;
+    border-radius: 20px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+}
+
+.city_info {
+    display: flex;
+    align-items: center;
+}
+
+.img_div {
+    padding: 20px 20px;
+    background-color: rgb(44, 44, 44);
+    display: flex;
+    border-radius: 20px 20px 0px 0px;
+    justify-content: center;
+}
+
+.img_div>img {
+    height: 30%;
+    width: 30%;
+}
+
+.insights {
+    width: 80%;
+    margin: auto;
+    font-family: 'Courier New';
+}
+
+#city_name {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(179, 179, 179);
+}
+#sunrise,#sunset{
+    font-size:16px;
+}

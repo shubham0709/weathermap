@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Map</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div id="navbar">
+        <h1>WEATHER MAP</h1>
+        <input type="text" id="city" placeholder="type city name">
+        <button id="search" onclick="findWeather()">search</button>
+    </div>
+
+    <div class="main">
+        <div class="city_info">
+            <div class="all_data">
+                <div class="img_div">
+                    <img style="border-radius:50%;" id="weather_icon" src="https://media2.giphy.com/media/7LLviNCYAmMWA/200w.webp?cid=ecf05e478h01zwcxz8w7dpqf16qun6fakjtjpdxuuch6w9by&rid=200w.webp&ct=g" alt="">
+                    <h1 id="city_name"></h1>
+                </div>
+                <!-- min temp, max temp, wind, clounds, sunrise, sunset etc. -->
+                <div class="insights">
+                    <h2 id="min_temp"></h2>
+                    <h2 id="max_temp"></h2>
+                    <h2 id="wind"></h2>
+                    <h2 id="weather"></h2>
+                    <h3 id="sunrise"></h3>
+                    <h3 id="sunset"></h3>
+                </div>
+            </div>
+        </div>
+        <!-- map starts -->
+        <div class="city_map">
+            <div class="mapouter">
+                <div class="gmap_canvas">
+                    <iframe width="900" height="600" id="gmap_canvas"
+                        src="https://maps.google.com/maps?q=indore&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
+                        scrolling="no" marginheight="0" marginwidth="0">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+        <!-- map ends -->
+    </div>
+</body>
+</html>
+<script src="index.js"></script>
