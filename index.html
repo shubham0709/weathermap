@@ -7,20 +7,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Map</title>
     <link rel="stylesheet" href="index.css">
+    <style>
+        #forecast_div{
+            display:flex;
+            width:100%;
+            height:200px;
+            justify-content:space-around;
+            margin:1px 0px 2px 0px;
+            font-family:sans-serif;
+            display: none;
+        }
+        .forecast_elements > img{
+            width:60px;
+            height:60px;
+        }
+        .forecast_elements{
+            background-color:rgb(49, 49, 49);
+            width:12.5%;
+            height:200px;
+            border:1px solid gray;
+            display:flex;
+            flex-direction: column;
+            justify-content:center;
+            align-items:center;
+            margin-top:0;
+            margin-bottom:0;
+            color:white;
+            font-weight: 900;
+        }
+        .forecast_elements:nth-child(1){
+            border-radius:0px 0px 0px 30px;
+            background-color:rgba(82, 82, 82, 0.8)
+        }
+        .forecast_elements:last-child{
+            border-radius:0px 0px 30px 0px;
+        }
+        .forecast_elements > h2,.forecast_elements>h2{
+            line-height:10px;
+        }
+    </style>
 </head>
 
 <body>
     <div id="navbar">
         <h1>WEATHER MAP</h1>
+        <button id="show_forecast_button" onclick="forecast()">VIEW 7 DAYS FORECAST</button>
         <input type="text" id="city" placeholder="type city name">
         <button id="search" onclick="findWeather()">search</button>
     </div>
-
+    <div id="forecast_div">
+        
+    </div>
     <div class="main">
         <div class="city_info">
             <div class="all_data">
                 <div class="img_div">
-                    <img style="border-radius:50%;" id="weather_icon" src="https://media2.giphy.com/media/7LLviNCYAmMWA/200w.webp?cid=ecf05e478h01zwcxz8w7dpqf16qun6fakjtjpdxuuch6w9by&rid=200w.webp&ct=g" alt="">
+                    <img style="border-radius:50%;" id="weather_icon"
+                        src="https://media2.giphy.com/media/7LLviNCYAmMWA/200w.webp?cid=ecf05e478h01zwcxz8w7dpqf16qun6fakjtjpdxuuch6w9by&rid=200w.webp&ct=g"
+                        alt="">
                     <h1 id="city_name"></h1>
                 </div>
                 <!-- min temp, max temp, wind, clounds, sunrise, sunset etc. -->
@@ -48,5 +92,6 @@
         <!-- map ends -->
     </div>
 </body>
+
 </html>
 <script src="index.js"></script>
